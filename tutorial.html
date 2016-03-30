@@ -10,24 +10,23 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script>
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+    </script>
   </head>
   <body>
-      <table class="highlight bordered">
-       <thead>
-         <tr>
-             <th data-field="id">Name/title</th>
-             <th data-field="name">Classifciation</th>
-             <th data-field="price">Text</th>
-         </tr>
-       </thead>
-       <tbody id="recipeDiv">
+    <div class="parallax-container" style="height:70%;">
+      <div class="parallax"><img src="img/recipes.jpg"></div>
+    </div>
 
-       </tbody>
-     </table>
-     <br/>
-     <br/>
-     <br/>
-    <div class="row center">
+    <div>
+      <h1 class="center"> Put your recipes here! </h1>
+    </div>
+  
+    <div class="row center teal lighten-5" style="width:40%;">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
@@ -55,6 +54,23 @@
       </div>
     </form>
     </div>
+    <div class="" style="width:80%;margin: 0 auto">
+        <table class="highlight bordered light-green lighten-3">
+       <thead>
+         <tr>
+             <th data-field="id">Name/title</th>
+             <th data-field="name">Classification</th>
+             <th data-field="price">Text</th>
+         </tr>
+       </thead>
+       <tbody id="recipeDiv">
+
+       </tbody>
+     </table>
+     <br/>
+     <br/>
+     <br/>
+     </div>
     <script>
       var myDataRef = new Firebase('https://radiant-heat-4749.firebaseio.com/');
       $('#submit').click(function () {
